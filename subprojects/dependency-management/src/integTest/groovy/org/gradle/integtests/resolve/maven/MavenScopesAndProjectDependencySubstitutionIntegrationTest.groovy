@@ -24,6 +24,7 @@ class MavenScopesAndProjectDependencySubstitutionIntegrationTest extends Abstrac
 
     def setup() {
         resolve.prepare()
+        resolve.expectDefaultConfiguration("runtime")
         settingsFile << """
             rootProject.name = 'testproject'
             include 'child1', 'child2'

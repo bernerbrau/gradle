@@ -75,7 +75,7 @@ dependencies {
         succeeds 'checkDep'
         resolve.expectGraph {
             root(':', ':testproject:') {
-                module('org.test:maven:1.0') {
+                module('org.test:maven:1.0:runtime') {
                     module('org.test:ivy:1.0') {
                         artifact(name: 'compile')
                         artifact(name: 'runtime')
@@ -165,7 +165,7 @@ dependencies {
         succeeds 'checkDep'
         resolve.expectGraph {
             root(':', ':testproject:') {
-                module('org.test:maven:1.0') {
+                module('org.test:maven:1.0:runtime') {
                     module('org.test:ivy:1.0') {
                         artifact(name: 'compile')
                         artifact(name: 'runtime')
@@ -297,7 +297,7 @@ dependencies {
         succeeds 'checkDep'
         resolve.expectGraph {
             root(':', ':testproject:') {
-                module('org.test:maven:1.0') {
+                module('org.test:maven:1.0:runtime') {
                     configuration = 'compile'
                     edge('org.test:ivy:1.+', 'org.test:ivy:1.2') {
                         artifact(name: 'compile')
@@ -331,9 +331,9 @@ dependencies {
         succeeds 'checkDep'
         resolve.expectGraph {
             root(':', ':testproject:') {
-                module('org.test:m4:1.0') {
+                module('org.test:m4:1.0:runtime') {
                     module('org.test:m3:1.0') {
-                        module('org.test:m2:1.0') {
+                        module('org.test:m2:1.0:runtime') {
                             module('org.test:m1:1.0')
                         }
                     }

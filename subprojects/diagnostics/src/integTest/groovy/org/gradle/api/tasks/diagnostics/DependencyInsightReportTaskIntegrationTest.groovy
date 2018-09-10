@@ -2227,8 +2227,6 @@ org:foo:[1.0,) -> 1.1
         bom.dependencyConstraint(leaf)
         bom.publish()
 
-        FeaturePreviewsFixture.enableImprovedPomSupport(settingsFile)
-
         file("build.gradle") << """
             apply plugin: 'java-library'
 
